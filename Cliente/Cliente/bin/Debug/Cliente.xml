@@ -1,0 +1,112 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Cliente
+</name>
+</assembly>
+<members>
+<member name="T:Cliente.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Cliente.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Cliente.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="F:Cliente.SkillData.Nome">
+ <summary>
+ Nome da Skill
+ </summary>
+</member>
+<member name="F:Cliente.SkillData.CustoMP">
+ <summary>
+ Quantia de MP a se gasto
+ </summary>
+</member>
+<member name="F:Cliente.SkillData.CoolDown">
+ <summary>
+ Tempo de re-uso da skill
+ </summary>
+</member>
+<member name="F:Cliente.SkillData.MaxEffect">
+ <summary>
+ Limite de Efeitos
+ </summary>
+</member>
+<member name="F:Cliente.SkillData.EffectData.Tipo">
+ <summary>
+ Tipo do Efeito
+ </summary>
+</member>
+<member name="F:Cliente.SkillData.EffectData.CastAnimation">
+ <summary>
+ Animação ao usar a Skill no personagem
+ </summary>
+</member>
+<member name="P:Cliente.SkillData.EffectData.CastData">
+ <summary>
+ Dados da animação de uso da skill
+ </summary>
+</member>
+<member name="F:Cliente.SkillData.EffectData.CastTimer">
+ <summary>
+ Tempo que leva para usar a Skill
+ </summary>
+</member>
+<member name="F:Cliente.SkillData.EffectData.Anim">
+ <summary>
+ Animação do Efeito
+ </summary>
+</member>
+<member name="P:Cliente.SkillData.EffectData.AnimData">
+ <summary>
+ Dados da animação do Efeito
+ </summary>
+</member>
+<member name="F:Cliente.SkillData.EffectData.Vital">
+ <summary>
+ Valor de Cura ou Dano do efeito
+ </summary>
+</member>
+<member name="F:Cliente.SkillData.EffectData.isAOE">
+ <summary>
+ Determina se o efeito é de Área
+ </summary>
+</member>
+<member name="F:Cliente.SkillData.EffectData.Range">
+ <summary>
+ Valor de Área ou Distância do alvo, máximo!
+ </summary>
+</member>
+<member name="F:Cliente.SkillData.EffectData.Roubo">
+ <summary>
+ <para>Valor de roubo de Vida ou Mana.</para> 
+ <para>Valores: 0 - 100%</para>
+ </summary>
+</member>
+<member name="M:Cliente.ByteBuffer.#ctor">
+ <summary>
+ Normal
+ </summary>
+</member>
+<member name="M:Cliente.ByteBuffer.#ctor(System.Byte[])">
+ <summary>
+ Receber pacote de dados
+ </summary>
+</member>
+<member name="M:Cliente.ByteBuffer.#ctor(System.Int64)">
+ <summary>
+ Enviar pacote de dados
+ </summary>
+</member>
+</members>
+</doc>

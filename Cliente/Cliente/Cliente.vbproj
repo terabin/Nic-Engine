@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBA7EA5E-7800-415C-9BAC-3F6191F7C966}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>Cliente</RootNamespace>
+    <AssemblyName>Cliente</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Cliente.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42032,42036</NoWarn>
+    <WarningsAsErrors>42020,42021,42022,42105,42106,42107,42353,42354,42355</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Cliente.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42032,42036</NoWarn>
+    <WarningsAsErrors>42020,42021,42022,42105,42106,42107,42353,42354,42355</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="sfmlnet-audio-2">
+      <HintPath>..\..\SFML.Net-2.2-32-bit\SFML.Net-2.2\lib\sfmlnet-audio-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-graphics-2">
+      <HintPath>..\..\SFML.Net-2.2-32-bit\SFML.Net-2.2\lib\sfmlnet-graphics-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-system-2">
+      <HintPath>..\..\SFML.Net-2.2-32-bit\SFML.Net-2.2\lib\sfmlnet-system-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-window-2">
+      <HintPath>..\..\SFML.Net-2.2-32-bit\SFML.Net-2.2\lib\sfmlnet-window-2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\Editors\Animação\Editor_Anim.vb" />
+    <Compile Include="Form\Editors\Animação\frmEditor_Anim.Designer.vb">
+      <DependentUpon>frmEditor_Anim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Editors\Animação\frmEditor_Anim.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Editors\frmEditor_Index.Designer.vb">
+      <DependentUpon>frmEditor_Index.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Editors\frmEditor_Index.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Editors\Item\frmEditor_Item.Designer.vb">
+      <DependentUpon>frmEditor_Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Editors\Item\frmEditor_Item.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Editors\Mapa\frmEditor_MapProp.Designer.vb">
+      <DependentUpon>frmEditor_MapProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Editors\Mapa\frmEditor_MapProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Editors\Npc\frmEditor_Npc.Designer.vb">
+      <DependentUpon>frmEditor_Npc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Editors\Npc\frmEditor_Npc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Editors\Skill\frmEditor_Skill.Designer.vb">
+      <DependentUpon>frmEditor_Skill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Editors\Skill\frmEditor_Skill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmAdmin.Designer.vb">
+      <DependentUpon>frmAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Editors\Mapa\frmEditor_Map.Designer.vb">
+      <DependentUpon>frmEditor_Map.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Editors\Mapa\frmEditor_Map.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\API Library\Componentes\BaseComponentes.vb" />
+    <Compile Include="Sistema\API Library\Componentes\Button.vb" />
+    <Compile Include="Sistema\API Library\Componentes\CheckBox.vb" />
+    <Compile Include="Sistema\API Library\Componentes\TextBox.vb" />
+    <Compile Include="Sistema\API Library\Componentes\Window.vb" />
+    <Compile Include="Sistema\Database\Anim_Data.vb" />
+    <Compile Include="Sistema\Database\Item_Data.vb" />
+    <Compile Include="Sistema\Database\Skill_Data.vb" />
+    <Compile Include="Sistema\Database\Npc_Data.vb" />
+    <Compile Include="Sistema\Database\Player_Data.vb" />
+    <Compile Include="Form\Editors\Item\Editor_Item.vb" />
+    <Compile Include="Form\Editors\Npc\Editor_Npc.vb" />
+    <Compile Include="Sistema\IA\Chat.vb" />
+    <Compile Include="Sistema\Core.vb" />
+    <Compile Include="Sistema\Database\Class_Data.vb" />
+    <Compile Include="Sistema\Database\Map_Data.vb" />
+    <Compile Include="Form\Editors\Mapa\Editor_Map.vb" />
+    <Compile Include="Sistema\Enumerations.vb" />
+    <Compile Include="Sistema\General.vb" />
+    <Compile Include="Sistema\API Library\Graficos\SFML_System.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Sistema\API Library\Graficos\SFML_Text.vb" />
+    <Compile Include="Sistema\IA\Animações.vb" />
+    <Compile Include="Sistema\IA\Drop.vb" />
+    <Compile Include="Sistema\IA\Player.vb" />
+    <Compile Include="Sistema\IA\Spawn.vb" />
+    <Compile Include="Sistema\Memoria.vb" />
+    <Compile Include="Sistema\Network\ByteBuffer.vb" />
+    <Compile Include="Sistema\Network\HandleSocket.vb" />
+    <Compile Include="Sistema\Network\SendSocket.vb" />
+    <Compile Include="Sistema\Network\Socket.vb" />
+    <Compile Include="Sistema\API Library\Som\Musica.vb" />
+    <Compile Include="Sistema\Options.vb" />
+    <Compile Include="Sistema\API Library\Som\Som.vb" />
+    <Compile Include="Sistema\Telas\Criar Char\Tela_CriarChar.vb" />
+    <Compile Include="Sistema\Telas\General.vb" />
+    <Compile Include="Sistema\Telas\InGame\Tela_InGame.vb" />
+    <Compile Include="Sistema\Telas\InGame\Tela_InGameComponente.vb" />
+    <Compile Include="Sistema\Telas\InGame\Tela_InGameRender.vb" />
+    <Compile Include="Sistema\Telas\Login\Tela_Login.vb" />
+    <Compile Include="Sistema\Telas\Registro\Tela_Registro.vb" />
+    <Compile Include="Sistema\Telas\Selecionar Char\Tela_SelectChar.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\Editors\Animação\frmEditor_Anim.resx">
+      <DependentUpon>frmEditor_Anim.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Editors\frmEditor_Index.resx">
+      <DependentUpon>frmEditor_Index.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Editors\Item\frmEditor_Item.resx">
+      <DependentUpon>frmEditor_Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Editors\Mapa\frmEditor_MapProp.resx">
+      <DependentUpon>frmEditor_MapProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Editors\Npc\frmEditor_Npc.resx">
+      <DependentUpon>frmEditor_Npc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Editors\Skill\frmEditor_Skill.resx">
+      <DependentUpon>frmEditor_Skill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmAdmin.resx">
+      <DependentUpon>frmAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Editors\Mapa\frmEditor_Map.resx">
+      <DependentUpon>frmEditor_Map.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="verdana.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="csfml-audio-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="csfml-graphics-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="csfml-system-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="csfml-window-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libsndfile-1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="openal32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

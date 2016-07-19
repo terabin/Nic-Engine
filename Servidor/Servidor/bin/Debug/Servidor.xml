@@ -1,0 +1,101 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Servidor
+</name>
+</assembly>
+<members>
+<member name="T:Servidor.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Servidor.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Servidor.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:Servidor.General.Modulo(System.Int32,System.Int32)">
+ <summary>
+ Calcula o Módulo de um Vetor (X,Y)
+ </summary>
+</member>
+<member name="M:Servidor.Combat.PlayerToNpc(System.Int32,System.Int16,System.Int32)">
+ <summary>
+ Usado para atacar um npc
+ </summary>
+</member>
+<member name="M:Servidor.Combat.NpcToPlayer(System.Int32,System.Int16,System.Int32)">
+ <summary>
+ Usado quando o Npc ataca o Jogador
+ </summary>
+</member>
+<member name="F:Servidor.modPlayer.PLAYER_POINT_LEVEL">
+ <summary>
+ Quantia de <c>Pontos</c> que o jogador vai ganhar por <c>level</c>!
+ </summary>
+</member>
+<member name="P:Servidor.clsPlayer.Damage">
+ <summary>
+ Dano Melee do Jogador
+ </summary>
+</member>
+<member name="P:Servidor.clsPlayer.MaxHP">
+ <summary>
+ Valor máximo da Vida do jogador
+ </summary>
+</member>
+<member name="P:Servidor.clsPlayer.MaxMP">
+ <summary>
+ Valor máximo da Mana do jogador
+ </summary>
+</member>
+<member name="P:Servidor.clsPlayer.NextLevel">
+ <summary>
+ Retorna o calculo de EXP para o próximo level do jogador
+ </summary>
+</member>
+<member name="P:Servidor.clsPlayer.MyIndex">
+ <summary>
+ Índice do Jogador
+ </summary>
+</member>
+<member name="P:Servidor.clsPlayer.Defesa">
+ <summary>
+ Calculo de Defesa do Jogador
+ </summary>
+</member>
+<member name="M:Servidor.clsPlayer.AddExp(System.Int64)">
+ <summary>
+ Adiciona e calcula a EXP para o level do jogador
+ </summary>
+</member>
+<member name="M:Servidor.clsPlayer.Dead">
+ <summary>
+ Função de quando o Jogador morre
+ </summary>
+</member>
+<member name="M:Servidor.ByteBuffer.#ctor">
+ <summary>
+ Normal
+ </summary>
+</member>
+<member name="M:Servidor.ByteBuffer.#ctor(System.Byte[])">
+ <summary>
+ Receber pacote de dados
+ </summary>
+</member>
+<member name="M:Servidor.ByteBuffer.#ctor(System.Int64)">
+ <summary>
+ Enviar pacote de dados
+ </summary>
+</member>
+</members>
+</doc>
