@@ -83,6 +83,7 @@ Partial Public Class Tela_InGame
         If frmEditor_Map.Visible And frmEditor_Map.chkGrid.Checked Then RenderMapGrid()
         If frmEditor_Item.Visible Then RenderEditor_ItemIcon()
         If frmEditor_Anim.Visible Then RenderEditor_Animation()
+        If frmEditor_Skill.Visible Then RenderEditor_Skill()
         MyBase.Draw()
     End Sub
 

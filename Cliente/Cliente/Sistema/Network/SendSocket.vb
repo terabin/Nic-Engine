@@ -20,7 +20,40 @@
         ChangeInv
         Attack
         UpdateAnim
+        UpdateSkill
     End Enum
+
+    Public Sub SendUpdateSkill(ByVal skillNum As Integer)
+        Dim Buffer As New ByteBuffer
+        Buffer.WriteInteger(skillNum)
+
+        With Skill(skillNum)
+            Buffer.WriteString(.Nome)
+            Buffer.WriteInteger(.CustoMP)
+            Buffer.WriteShort(.CoolDown)
+            Buffer.WriteShort(.MaxEffect)
+            Buffer.WriteShort(.Icon)
+
+            For i As Short = 1 To MAX_EFEITOS
+                Buffer.WriteShort(.Effect(i).Tipo)
+                Buffer.WriteShort(.Effect(i).CastAnimation)
+                Buffer.WriteShort(.Effect(i).CastTimer)
+                Buffer.WriteShort(.Effect(i).Anim)
+                Buffer.WriteInteger(.Effect(i).Vital)
+                Buffer.WriteShort(.Effect(i).isAOE)
+                Buffer.WriteShort(.Effect(i).Range)
+                Buffer.WriteShort(.Effect(i).Roubo)
+            Next
+        End With
+        Dim b() As Byte = Compress(Buffer.ToArray)
+        Buffer.Dispose()
+
+        Buffer = New ByteBuffer(ClientPacket.UpdateSkill)
+        Buffer.WriteInteger(b.Length)
+        Buffer.WriteBytes(b)
+        SendData(Buffer.ToArray)
+        Buffer.Dispose()
+    End Sub
 
     Public Sub SendUpdateAnim(ByVal animNum As Integer)
         Dim Buffer As New ByteBuffer()

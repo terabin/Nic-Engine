@@ -43,10 +43,6 @@ Partial Class frmEditor_Skill
         Me.cmbEffect2 = New System.Windows.Forms.Button()
         Me.cmbEffect1 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.gpRouba = New System.Windows.Forms.GroupBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtRouba = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.cmbAnim = New System.Windows.Forms.ComboBox()
         Me.cmbTipo = New System.Windows.Forms.ComboBox()
@@ -59,27 +55,37 @@ Partial Class frmEditor_Skill
         Me.cmbCAnim = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.gpVital = New System.Windows.Forms.GroupBox()
+        Me.txtRange = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.chkAoe = New System.Windows.Forms.CheckBox()
+        Me.txtVital = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.gpRouba = New System.Windows.Forms.GroupBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtRouba = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.txtMP = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNome = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.gpVital = New System.Windows.Forms.GroupBox()
-        Me.txtVital = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.chkAoe = New System.Windows.Forms.CheckBox()
-        Me.txtRange = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.picIcon = New System.Windows.Forms.PictureBox()
+        Me.scrlIcon = New System.Windows.Forms.HScrollBar()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabControl2.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.gpRouba.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.gpVital.SuspendLayout()
+        Me.gpRouba.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        CType(Me.picIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -105,6 +111,7 @@ Partial Class frmEditor_Skill
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Location = New System.Drawing.Point(12, 67)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -301,44 +308,6 @@ Partial Class frmEditor_Skill
         Me.TabPage3.Text = "Configuração"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'gpRouba
-        '
-        Me.gpRouba.Controls.Add(Me.Label10)
-        Me.gpRouba.Controls.Add(Me.txtRouba)
-        Me.gpRouba.Controls.Add(Me.Label9)
-        Me.gpRouba.Location = New System.Drawing.Point(192, 86)
-        Me.gpRouba.Name = "gpRouba"
-        Me.gpRouba.Size = New System.Drawing.Size(234, 126)
-        Me.gpRouba.TabIndex = 20
-        Me.gpRouba.TabStop = False
-        Me.gpRouba.Visible = False
-        '
-        'Label10
-        '
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(6, 82)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(222, 41)
-        Me.Label10.TabIndex = 18
-        Me.Label10.Text = "* Requer que a Habilidade tenha algum outro Efeito que cause dano."
-        '
-        'txtRouba
-        '
-        Me.txtRouba.Location = New System.Drawing.Point(76, 19)
-        Me.txtRouba.Name = "txtRouba"
-        Me.txtRouba.Size = New System.Drawing.Size(152, 20)
-        Me.txtRouba.TabIndex = 17
-        Me.txtRouba.Text = "0"
-        '
-        'Label9
-        '
-        Me.Label9.Location = New System.Drawing.Point(6, 17)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(64, 23)
-        Me.Label9.TabIndex = 16
-        Me.Label9.Text = "% do Dano:"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.cmbAnim)
@@ -461,6 +430,105 @@ Partial Class frmEditor_Skill
         Me.Button2.Text = "Ok"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'gpVital
+        '
+        Me.gpVital.Controls.Add(Me.txtRange)
+        Me.gpVital.Controls.Add(Me.Label11)
+        Me.gpVital.Controls.Add(Me.chkAoe)
+        Me.gpVital.Controls.Add(Me.txtVital)
+        Me.gpVital.Controls.Add(Me.Label12)
+        Me.gpVital.Location = New System.Drawing.Point(192, 86)
+        Me.gpVital.Name = "gpVital"
+        Me.gpVital.Size = New System.Drawing.Size(234, 126)
+        Me.gpVital.TabIndex = 21
+        Me.gpVital.TabStop = False
+        Me.gpVital.Visible = False
+        '
+        'txtRange
+        '
+        Me.txtRange.Location = New System.Drawing.Point(76, 68)
+        Me.txtRange.Name = "txtRange"
+        Me.txtRange.Size = New System.Drawing.Size(152, 20)
+        Me.txtRange.TabIndex = 20
+        Me.txtRange.Text = "0"
+        '
+        'Label11
+        '
+        Me.Label11.Location = New System.Drawing.Point(6, 66)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(64, 23)
+        Me.Label11.TabIndex = 19
+        Me.Label11.Text = "Range:"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'chkAoe
+        '
+        Me.chkAoe.AutoSize = True
+        Me.chkAoe.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chkAoe.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.chkAoe.Location = New System.Drawing.Point(174, 45)
+        Me.chkAoe.Name = "chkAoe"
+        Me.chkAoe.Size = New System.Drawing.Size(54, 17)
+        Me.chkAoe.TabIndex = 18
+        Me.chkAoe.Text = "Area?"
+        Me.chkAoe.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chkAoe.UseVisualStyleBackColor = True
+        '
+        'txtVital
+        '
+        Me.txtVital.Location = New System.Drawing.Point(76, 19)
+        Me.txtVital.Name = "txtVital"
+        Me.txtVital.Size = New System.Drawing.Size(152, 20)
+        Me.txtVital.TabIndex = 17
+        Me.txtVital.Text = "0"
+        '
+        'Label12
+        '
+        Me.Label12.Location = New System.Drawing.Point(6, 17)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(64, 23)
+        Me.Label12.TabIndex = 16
+        Me.Label12.Text = "Vital:"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'gpRouba
+        '
+        Me.gpRouba.Controls.Add(Me.Label10)
+        Me.gpRouba.Controls.Add(Me.txtRouba)
+        Me.gpRouba.Controls.Add(Me.Label9)
+        Me.gpRouba.Location = New System.Drawing.Point(192, 86)
+        Me.gpRouba.Name = "gpRouba"
+        Me.gpRouba.Size = New System.Drawing.Size(234, 126)
+        Me.gpRouba.TabIndex = 20
+        Me.gpRouba.TabStop = False
+        Me.gpRouba.Visible = False
+        '
+        'Label10
+        '
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(6, 82)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(222, 41)
+        Me.Label10.TabIndex = 18
+        Me.Label10.Text = "* Requer que a Habilidade tenha algum outro Efeito que cause dano."
+        '
+        'txtRouba
+        '
+        Me.txtRouba.Location = New System.Drawing.Point(76, 19)
+        Me.txtRouba.Name = "txtRouba"
+        Me.txtRouba.Size = New System.Drawing.Size(152, 20)
+        Me.txtRouba.TabIndex = 17
+        Me.txtRouba.Text = "0"
+        '
+        'Label9
+        '
+        Me.Label9.Location = New System.Drawing.Point(6, 17)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(64, 23)
+        Me.Label9.TabIndex = 16
+        Me.Label9.Text = "% do Dano:"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'txtMP
         '
         Me.txtMP.Location = New System.Drawing.Point(269, 25)
@@ -503,66 +571,45 @@ Partial Class frmEditor_Skill
         Me.Button1.Text = "Salvar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'gpVital
+        'TabPage4
         '
-        Me.gpVital.Controls.Add(Me.txtRange)
-        Me.gpVital.Controls.Add(Me.Label11)
-        Me.gpVital.Controls.Add(Me.chkAoe)
-        Me.gpVital.Controls.Add(Me.txtVital)
-        Me.gpVital.Controls.Add(Me.Label12)
-        Me.gpVital.Location = New System.Drawing.Point(192, 86)
-        Me.gpVital.Name = "gpVital"
-        Me.gpVital.Size = New System.Drawing.Size(234, 126)
-        Me.gpVital.TabIndex = 21
-        Me.gpVital.TabStop = False
-        Me.gpVital.Visible = False
+        Me.TabPage4.Controls.Add(Me.scrlIcon)
+        Me.TabPage4.Controls.Add(Me.picIcon)
+        Me.TabPage4.Controls.Add(Me.Label13)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(453, 301)
+        Me.TabPage4.TabIndex = 1
+        Me.TabPage4.Text = "Gráfico"
+        Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'txtVital
+        'Label13
         '
-        Me.txtVital.Location = New System.Drawing.Point(76, 19)
-        Me.txtVital.Name = "txtVital"
-        Me.txtVital.Size = New System.Drawing.Size(152, 20)
-        Me.txtVital.TabIndex = 17
-        Me.txtVital.Text = "0"
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(25, 30)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(37, 13)
+        Me.Label13.TabIndex = 0
+        Me.Label13.Text = "Icone:"
         '
-        'Label12
+        'picIcon
         '
-        Me.Label12.Location = New System.Drawing.Point(6, 17)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(64, 23)
-        Me.Label12.TabIndex = 16
-        Me.Label12.Text = "Vital:"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.picIcon.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.picIcon.Location = New System.Drawing.Point(68, 20)
+        Me.picIcon.Name = "picIcon"
+        Me.picIcon.Size = New System.Drawing.Size(32, 32)
+        Me.picIcon.TabIndex = 1
+        Me.picIcon.TabStop = False
         '
-        'chkAoe
+        'scrlIcon
         '
-        Me.chkAoe.AutoSize = True
-        Me.chkAoe.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkAoe.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.chkAoe.Location = New System.Drawing.Point(174, 45)
-        Me.chkAoe.Name = "chkAoe"
-        Me.chkAoe.Size = New System.Drawing.Size(54, 17)
-        Me.chkAoe.TabIndex = 18
-        Me.chkAoe.Text = "Area?"
-        Me.chkAoe.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkAoe.UseVisualStyleBackColor = True
-        '
-        'txtRange
-        '
-        Me.txtRange.Location = New System.Drawing.Point(76, 68)
-        Me.txtRange.Name = "txtRange"
-        Me.txtRange.Size = New System.Drawing.Size(152, 20)
-        Me.txtRange.TabIndex = 20
-        Me.txtRange.Text = "0"
-        '
-        'Label11
-        '
-        Me.Label11.Location = New System.Drawing.Point(6, 66)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(64, 23)
-        Me.Label11.TabIndex = 19
-        Me.Label11.Text = "Range:"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.scrlIcon.LargeChange = 1
+        Me.scrlIcon.Location = New System.Drawing.Point(44, 55)
+        Me.scrlIcon.Maximum = 0
+        Me.scrlIcon.Name = "scrlIcon"
+        Me.scrlIcon.Size = New System.Drawing.Size(80, 17)
+        Me.scrlIcon.TabIndex = 2
         '
         'frmEditor_Skill
         '
@@ -584,13 +631,16 @@ Partial Class frmEditor_Skill
         Me.TabControl2.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
-        Me.gpRouba.ResumeLayout(False)
-        Me.gpRouba.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.gpVital.ResumeLayout(False)
         Me.gpVital.PerformLayout()
+        Me.gpRouba.ResumeLayout(False)
+        Me.gpRouba.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
+        CType(Me.picIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -643,4 +693,8 @@ Partial Class frmEditor_Skill
     Friend WithEvents txtRange As Windows.Forms.TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents chkAoe As Windows.Forms.CheckBox
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents scrlIcon As HScrollBar
+    Friend WithEvents picIcon As PictureBox
+    Friend WithEvents Label13 As Label
 End Class

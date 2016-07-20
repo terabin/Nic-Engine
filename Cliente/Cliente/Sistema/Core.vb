@@ -36,7 +36,7 @@
             If GetTickCount > tmrRender Then
                 Tela_General.Draw()
                 If frmEditor_Map.Visible Then RenderEditor_MapTile()
-                tmrRender = GetTickCount + 3
+                tmrRender = GetTickCount + 2
             End If
 
             DoEvents()

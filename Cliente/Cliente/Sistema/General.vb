@@ -63,9 +63,9 @@
         Next
 
         ' Skills
-        ReDim Skill(Options.MAX_SKILL + 1)
+        Skill.Add(Nothing)
         For i As Short = 1 To Options.MAX_SKILL
-            Skill(i) = New SkillData
+            Skill.Add(New SkillData)
         Next
 
     End Sub

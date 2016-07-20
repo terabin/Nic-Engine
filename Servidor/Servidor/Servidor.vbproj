@@ -98,11 +98,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Sistema\Database\Anim_Data.vb" />
-    <Compile Include="Sistema\Database\Classe_Data.vb" />
-    <Compile Include="Sistema\Database\Item_Data.vb" />
-    <Compile Include="Sistema\Database\Mapa_Data.vb" />
-    <Compile Include="Sistema\Database\Npc_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Anim_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Classe_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Item_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Mapa_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Npc_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Skill_Data.vb" />
     <Compile Include="Sistema\Enumeration.vb" />
     <Compile Include="Sistema\General.vb" />
     <Compile Include="Sistema\Core.vb" />

@@ -12,6 +12,7 @@
     Public Shared MAX_ITEM As Short = 100
     Public Shared MAX_MAP_ITEM As Short = 30
     Public Shared MAX_ANIMATION As Short = 100
+    Public Shared MAX_SKILL As Short = 100
 #End Region
 
     Public Shared GAME_NAME As String = "Nic Engine"

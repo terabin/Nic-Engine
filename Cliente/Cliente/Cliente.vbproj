@@ -121,6 +121,7 @@
     <Compile Include="Form\Editors\Npc\frmEditor_Npc.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\Editors\Skill\Editor_Skill.vb" />
     <Compile Include="Form\Editors\Skill\frmEditor_Skill.Designer.vb">
       <DependentUpon>frmEditor_Skill.vb</DependentUpon>
     </Compile>
@@ -151,17 +152,17 @@
     <Compile Include="Sistema\API Library\Componentes\CheckBox.vb" />
     <Compile Include="Sistema\API Library\Componentes\TextBox.vb" />
     <Compile Include="Sistema\API Library\Componentes\Window.vb" />
-    <Compile Include="Sistema\Database\Anim_Data.vb" />
-    <Compile Include="Sistema\Database\Item_Data.vb" />
-    <Compile Include="Sistema\Database\Skill_Data.vb" />
-    <Compile Include="Sistema\Database\Npc_Data.vb" />
-    <Compile Include="Sistema\Database\Player_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Anim_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Item_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Skill_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Npc_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Player_Data.vb" />
     <Compile Include="Form\Editors\Item\Editor_Item.vb" />
     <Compile Include="Form\Editors\Npc\Editor_Npc.vb" />
     <Compile Include="Sistema\IA\Chat.vb" />
     <Compile Include="Sistema\Core.vb" />
-    <Compile Include="Sistema\Database\Class_Data.vb" />
-    <Compile Include="Sistema\Database\Map_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Class_Data.vb" />
+    <Compile Include="Sistema\Estruturas\Map_Data.vb" />
     <Compile Include="Form\Editors\Mapa\Editor_Map.vb" />
     <Compile Include="Sistema\Enumerations.vb" />
     <Compile Include="Sistema\General.vb" />

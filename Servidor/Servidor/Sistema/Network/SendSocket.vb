@@ -22,6 +22,7 @@
         NpcVital
         NpcDir
         PlayerVitalHP
+        UpdateSkill
     End Enum
 
     Public ReadOnly Property PlayerData(ByVal Index As Integer) As Byte()
@@ -74,6 +75,52 @@
             Return Buffer.ToArray
         End Get
     End Property
+
+    Public Sub SendSkills(ByVal Index As Integer)
+        For i As Short = 1 To Options.MAX_SKILL
+            SendUpdateSkill(Index, i)
+        Next
+    End Sub
+
+    Public Sub SendUpdateSkillToAll(ByVal skillID As Integer)
+        For i As Short = 1 To Options.MAX_PLAYERS
+            If IsPlaying(i) Then
+                SendUpdateSkill(i, skillID)
+            End If
+        Next
+    End Sub
+
+    Public Sub SendUpdateSkill(ByVal Index As Integer, ByVal skillID As Integer)
+        Dim Buffer As New ByteBuffer
+        Buffer.WriteInteger(skillID)
+
+        With Skill(skillID)
+            Buffer.WriteString(.Nome)
+            Buffer.WriteInteger(.CustoMP)
+            Buffer.WriteShort(.CoolDown)
+            Buffer.WriteShort(.MaxEffect)
+            Buffer.WriteShort(.Icon)
+
+            For i As Short = 1 To MAX_EFEITOS
+                Buffer.WriteShort(.Effect(i).Tipo)
+                Buffer.WriteShort(.Effect(i).CastAnimation)
+                Buffer.WriteShort(.Effect(i).CastTimer)
+                Buffer.WriteShort(.Effect(i).Anim)
+                Buffer.WriteInteger(.Effect(i).Vital)
+                Buffer.WriteShort(.Effect(i).isAOE)
+                Buffer.WriteShort(.Effect(i).Range)
+                Buffer.WriteShort(.Effect(i).Roubo)
+            Next
+        End With
+        Dim b() As Byte = Compress(Buffer.ToArray)
+        Buffer.Dispose()
+
+        Buffer = New ByteBuffer(ServerPacket.UpdateSkill)
+        Buffer.WriteInteger(b.Length)
+        Buffer.WriteBytes(b)
+        SendDataTo(Index, Buffer.ToArray)
+        Buffer.Dispose()
+    End Sub
 
     Public Sub SendPlayerVitalHP(ByVal Index As Integer)
         Using Buffer As New ByteBuffer(ServerPacket.PlayerVitalHP)

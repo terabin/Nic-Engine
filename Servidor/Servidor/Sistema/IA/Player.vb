@@ -16,6 +16,7 @@
         SendAnimations(Index)
         SendNpcs(Index)
         SendItems(Index)
+        SendSkills(Index)
 
         ' Enviar Dados
         SendInventoy(Index)

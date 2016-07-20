@@ -117,12 +117,9 @@ Module Socket
         If Index > 0 Then
             LeftGame(Index)
             If Not Clients(Index).Socket Is Nothing Then Clients(Index).Socket.Close()
-            Clients(Index).index = 0
             Conta(Index).Clear()
             Player(Index).Clear()
         End If
-
-
     End Sub
 
     Public Function IsConnected(ByVal Index As Integer) As Boolean

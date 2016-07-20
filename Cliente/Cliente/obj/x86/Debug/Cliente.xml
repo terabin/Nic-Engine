@@ -42,6 +42,11 @@ Cliente
  Limite de Efeitos
  </summary>
 </member>
+<member name="F:Cliente.SkillData.Icon">
+ <summary>
+ Gráfico do Icone
+ </summary>
+</member>
 <member name="F:Cliente.SkillData.EffectData.Tipo">
  <summary>
  Tipo do Efeito

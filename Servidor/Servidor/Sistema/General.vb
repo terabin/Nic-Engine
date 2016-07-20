@@ -45,6 +45,12 @@ Module General
             Animation(i) = New AnimData
         Next
 
+        ' Preparar Skills
+        Skill.Add(Nothing)
+        For i As Short = 1 To Options.MAX_SKILL
+            Skill.Add(New SkillData)
+        Next
+
         ' Carregar Banco de Dados
         LoadDatabase()
 
@@ -77,6 +83,7 @@ Module General
         LoadNpcs()
         LoadItems()
         LoadMapas()
+        loadSkills
     End Sub
 
     Public ReadOnly Property GetTickCount As Integer

@@ -12,6 +12,7 @@
     End Sub
 
     Private Sub frmEditor_Skill_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        scrlIcon.Maximum = texSkill.Count - 1
         cmbAnim.Items.Clear()
         cmbAnim.Items.Add("Nothing")
         cmbCAnim.Items.Clear()
@@ -40,21 +41,12 @@
     Public Sub UpdateEditor()
         Dim index As Short = cmbIndex.SelectedIndex + 1
         ReDim tempEffect(MAX_EFEITOS + 1)
-        For i As Short = 1 To MAX_EFEITOS
-            tempEffect(i) = New SkillData.EffectData
-            tempEffect(i).Anim = Skill(index).Effect(i).Anim
-            tempEffect(i).CastAnimation = Skill(index).Effect(i).CastAnimation
-            tempEffect(i).CastTimer = Skill(index).Effect(i).CastTimer
-            tempEffect(i).isAOE = Skill(index).Effect(i).isAOE
-            tempEffect(i).Range = Skill(index).Effect(i).Range
-            tempEffect(i).Roubo = Skill(index).Effect(i).Roubo
-            tempEffect(i).Tipo = Skill(index).Effect(i).Tipo
-            tempEffect(i).Vital = Skill(index).Effect(i).Vital
-        Next
+        Array.Copy(Skill(index).Effect, tempEffect, tempEffect.Count - 1)
         cmbMEffect.SelectedIndex = Skill(index).MaxEffect - 1
         txtNome.Text = Skill(index).Nome
         txtMP.Text = Skill(index).CustoMP
         txtCD.Text = Skill(index).CoolDown
+        scrlIcon.Value = Skill(index).icon
 
         tabConfig = True
         TabControl2.SelectedIndex = 0
@@ -187,5 +179,22 @@
 
     Private Sub cmbIndex_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbIndex.SelectedIndexChanged
         UpdateEditor()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim Index As Short = cmbIndex.SelectedIndex + 1
+
+        With Skill(Index)
+            .Nome = txtNome.Text
+            .CustoMP = txtMP.Text
+            .CoolDown = txtCD.Text
+            .Icon = scrlIcon.Value
+            .MaxEffect = cmbMEffect.SelectedIndex + 1
+            Array.Copy(tempEffect, .Effect, tempEffect.Count - 1)
+
+            cmbIndex.Items.Item(cmbIndex.SelectedIndex) = .Nome
+            SendUpdateSkill(Index)
+            MsgBox("Salvo!")
+        End With
     End Sub
 End Class

@@ -15,6 +15,7 @@ Module SFML_System
     Public DeviceNpcSprite As RenderWindow
     Public DeviceItemIcon As RenderWindow
     Public DeviceAnim As RenderWindow
+    Public DeviceSkill As RenderWindow
 
     ' Camera
     Public Camera As IntRect
@@ -32,10 +33,11 @@ Module SFML_System
     Public texAnimation() As Integer
     Public texTile() As Integer
     Public texItem() As Integer
+    Public texSkill As HashSet(Of Integer) = New HashSet(Of Integer)()
 
 
     ' System Textures
-    Public GlobalTexture As List(Of clsGlobalTexture) = New List(Of clsGlobalTexture)
+    Public GlobalTexture As HashSet(Of clsGlobalTexture) = New HashSet(Of clsGlobalTexture)
 
     Public Sub InitGraficos()
         Dim Context As ContextSettings = New ContextSettings()
@@ -51,7 +53,7 @@ Module SFML_System
         DeviceNpcSprite = New RenderWindow(frmEditor_Npc.picSprite.Handle)
         DeviceItemIcon = New RenderWindow(frmEditor_Item.picIcon.Handle)
         DeviceAnim = New RenderWindow(frmEditor_Anim.picAnim.Handle)
-
+        DeviceSkill = New RenderWindow(frmEditor_Skill.picIcon.Handle)
 
         ' Carregar Font
         GameFont = New Font("verdana.ttf")
@@ -110,6 +112,14 @@ Module SFML_System
             i += 1
             ReDim Preserve texItem(0 To i)
             texItem(i) = LoadTexture(PATH_GRAFICO & "Item/" & i & ".png")
+        End While
+
+        ' Skill
+        texSkill.Add(0)
+        i = 0
+        While (IO.File.Exists(PATH_GRAFICO & "Skill/" & i + 1 & ".png"))
+            i += 1
+            texSkill.Add(LoadTexture(PATH_GRAFICO & "Skill/" & i & ".png"))
         End While
     End Sub
 
@@ -226,8 +236,7 @@ Public Class clsGlobalTexture
         End If
         File = fileName
 
-
-        Dim imageInfo As Image = New Image(fileName)
+        Dim imageInfo As New Image(fileName)
         Width = imageInfo.Size.X
         Height = imageInfo.Size.Y
         imageInfo = Nothing

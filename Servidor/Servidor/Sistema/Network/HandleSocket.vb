@@ -21,6 +21,7 @@ Module HandleSocket
         ChangeInv
         Attack
         UpdateAnim
+        UpdateSkill
     End Enum
 
     Public Sub HandleDataPackets(ByVal Index As Integer, ByVal Data() As Byte)
@@ -49,10 +50,43 @@ Module HandleSocket
             Case ClientPacket.ChangeInv : HandleChangeInv(Index, Data)
             Case ClientPacket.Attack : HandleAttack(Index)
             Case ClientPacket.UpdateAnim : HandleUpdateAnim(Index, Data)
+            Case ClientPacket.UpdateSkill : HandleUpdateSkill(Index, Data)
             Case Else
                 ' Nothing
         End Select
         Buffer.Dispose()
+    End Sub
+
+    Public Sub HandleUpdateSkill(ByVal Index As Integer, ByVal data() As Byte)
+        Dim Buffer As New ByteBuffer(data)
+        Buffer.ReadLong()
+        Dim len As Integer = Buffer.ReadInteger
+        Dim b() As Byte = Decompress(Buffer.ReadBytes(len - 1))
+        Buffer.Dispose()
+
+        Buffer = New ByteBuffer
+        Dim id As Integer = Buffer.ReadInteger
+
+        With Skill(id)
+            .Nome = Buffer.ReadString
+            .CustoMP = Buffer.ReadInteger
+            .CoolDown = Buffer.ReadShort
+            .MaxEffect = Buffer.ReadShort
+            .Icon = Buffer.ReadShort
+
+            For i As Short = 1 To MAX_EFEITOS
+                .Effect(i).Tipo = Buffer.ReadShort
+                .Effect(i).CastAnimation = Buffer.ReadShort
+                .Effect(i).CastTimer = Buffer.ReadShort
+                .Effect(i).Anim = Buffer.ReadShort
+                .Effect(i).Vital = Buffer.ReadInteger
+                .Effect(i).isAOE = Buffer.ReadShort
+                .Effect(i).Range = Buffer.ReadShort
+                .Effect(i).Roubo = Buffer.ReadShort
+            Next
+            .Save()
+            SendUpdateSkillToAll(id)
+        End With
     End Sub
 
     Public Sub HandleUpdateAnim(ByVal Index As Integer, ByVal data() As Byte)
